@@ -1,0 +1,23 @@
+**WHAT**
+
+We're proposing to build a front-end for the StarCraft II API hosted by Blizzard Entertainment's Battle.net. Our project will allow users to retrieve information regarding the player rankings on the SC2 ladder including region, ladder division and rank.
+
+There are three main components to the project:
+
+* Interaction with and documentation of the Blizzard API
+* Front-end webpage for users to interact with
+* Database storage of responses to requests to the Blizzard API
+
+For the first component, we'll need to develop an understanding of the various API endpoints and their interactions, the user input format, and callback data format.
+ We will need to set up an account with Blizzard's developer program and give them information about the project that we intend to create, such as the title of our project and the URL which we will be using to send requests to the API.
+ 
+ 
+ For the second component, we'll need to create a functional webpage and interface to allow users to intuitively and easily access the desired data. The primary challenge here is going to be coordinating the input from the user with the information that we want to obtain from the API and from our databases. Another significant portion is going to be properly formatting the HTML and CSS of the website to work as intended without being confusing to the user.
+ 
+ For the third component, we'll need to figure out how to integrate the API callback with the mysql database work for storage and records, and how to do that repeatedly and get the right information into the right tables. This will probably be the easiest part of the project to implement. Here's an example of the structure we're considering:
+ 
+ | Player_ID(s) | Player_Name(s) | Rank | Division | Region | Game_Type |
+ 
+ Data normalization might be another challenge to work with here, particularly if we end up implementing multiple gametypes and ladders. Figuring out how to optimally store the data we want to store will be an interesting task.
+ 
+ 
