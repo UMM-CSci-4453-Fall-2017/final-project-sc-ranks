@@ -1,6 +1,7 @@
 # **WHAT**
 
 We're proposing to build a front-end/backend tool for the StarCraft II API hosted by Blizzard Entertainment's Battle.net. Our project will allow users to retrieve information regarding player rankings on the SC2 ladder including region, ladder division and rank.
+
 The general idea is to take user input from the front-end web page, send that request via http to the API, use the API callback to populate/update our database, return a properly formatted sql query from our database.
 There are four main components for this project:
 
@@ -30,7 +31,8 @@ This will probably be the easiest part of the project to implement. Here's an ex
  The current proposed structure is not normalized, and will need to be when proper tables are created.
 ***
 # **WHO**
- **Kyle - Implementation & Presentation for:** 
+ **Kyle - Implementation & Presentation ** 
+  
   Front-end - **_10pts total_**
   
    * Design/Style - _5pts_
@@ -42,14 +44,15 @@ This will probably be the easiest part of the project to implement. Here's an ex
    * API request handlers - _5pts_
    * API callback handlers (make responses database friendly) - _5pts_
  
- **Spencer - Implementation & Presentation for:** 
-  Backend - **_15pts total_**
+ **Spencer - Implementation & Presentation ** 
+  
+  Backend - **_15pts Implementation & _**
   
    * Table design - _5pts_
    * Data normalization - _5pts_
    * Proper foreign-key/primary key usage - _5pts_
   
-  Server - **_10pts total_**
+  Server - **_10pts Implementation & _**
   
    * Functionality - _5pts_
    * Correct handling of client http requests/responses - _5pts_
