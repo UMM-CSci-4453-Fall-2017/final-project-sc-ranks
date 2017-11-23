@@ -24,13 +24,26 @@ For the fourth component, we'll need to figure out how to integrate the API call
 This will probably be the easiest part of the project to implement. Here's an example of the structure we're considering:
  -- Database Structure -- (subject to change as API calls are implemented/normalization is added to tables)
  Column Data: (| Player_ID(s) | Player_Name(s) | Rank | Team | Division | Region | Game_Type |) NOTE - (s) indicates records for team-gametypes. 
- Tables: REGION (Region, Division), LADDER_DIVISION (Division, Game_Type, Team, Rank), TEAM (Team, Rank, Game_type, Player_ID, Player_Name)    
+ Tables: REGION (Region, Division) LADDER_DIVISION (Division, Game_Type, Team, Rank), TEAM (Team, Rank, Game_type, Player_ID, Player_Name)    
                     
  Data normalization will be a challenge here, particularly if we end up implementing multiple gametypes and ladders. Figuring out how to optimally store the data/build proper foreign-key/primary key relationships will be interesting as there is room for a lot of redundancy. 
  The current proposed structure is not normalized, and will need to be when proper tables are created.
 ***
 # **WHO**
- Kyle - Implementation & Presentation for: Front-end/Blizzard API requests/responses to the server. (1), (2) and some of (3).
- 
- Spencer - Implementation & Presentation for: Backend/Server Implementation. (3) and (4).
+ **Kyle - Implementation & Presentation for:** 
+  Front-end - **_10pts total_**
+  * Design/Style - _5pts_
+  * Functionality - _5pts_
+  Blizzard API - **_15pts total_**
+  * Documentation/Usage - _5pts_ 
+  * API request handlers - _5pts_
+  * API callback handlers (make responses database friendly) - _5pts_
+ **Spencer - Implementation & Presentation for:** 
+  Backend - **_15pts total_**
+  * Table design - _5pts_
+  * Data normalization - _5pts_
+  * Proper foreign-key/primary key usage - _5pts_
+  Server - **_10pts total_**
+  * Functionality - _5pts_
+  * Correct handling of client http requests - _5pts_
  
