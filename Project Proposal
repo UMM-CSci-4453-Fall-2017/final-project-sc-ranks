@@ -13,15 +13,14 @@ For the first component, we'll need to develop an understanding of the various A
  We will need to set up an account with Blizzard's developer program and give them information about the project that we intend to create, such as the title of our project and the URL which we will be using to send requests to the API.
  
 For the second component, we'll need to create a functional webpage and interface to allow users to intuitively and easily access the desired data. The primary challenge here is going to be coordinating the input from the user with the information that we want to obtain from the API and from our databases. 
- Another significant portion is going to be properly formatting the HTML and CSS of the website to work as intended without being confusing to the user.
+ Another significant portion is going to be properly formatting the HTML and CSS of the website to work as intended without being confusing to the user. Intend to use angular and bootstrap as demonstrated in class.
  
 For the third component, we'll need to accomplish the following: 
--setup a connection to the database for queries
--create handlers for API requests/responses
--create/store the required local files for the server
--
+-setup a connection to the database for reading/writing data
+-create handlers for API requests/responses 
+-create/store the required local files that support server functionality
 
-For the fourth component, we'll need to figure out how to integrate the API callback with the mysql database work for storage and records, and how to do that repeatedly and get the right information into the right tables. 
+For the fourth component, we'll need to figure out how to integrate the API callback with the mysql database to work for storage and records, and how to do that repeatedly and get the right information into the right tables. 
 This will probably be the easiest part of the project to implement. Here's an example of the structure we're considering:
  -- Database Structure -- (subject to change as API calls are implemented/normalization is added to tables)
  Column Data: (| Player_ID(s) | Player_Name(s) | Rank | Team | Division | Region | Game_Type |) NOTE - (s) indicates records for team-gametypes. 
@@ -31,5 +30,6 @@ This will probably be the easiest part of the project to implement. Here's an ex
  The current proposed structure is not normalized, and will need to be when proper tables are created.
  
  **WHO**
- 
+ Kyle - Front-end/Blizzard API requests/responses with the server. (1), (2) and some of (3).
+ Spencer - Backend/Server implementation. (3) and (4).
  
