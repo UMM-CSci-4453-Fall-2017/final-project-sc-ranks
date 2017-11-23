@@ -31,7 +31,7 @@ This will probably be the easiest part of the project to implement. Here's an ex
  The current proposed structure is not normalized, and will need to be when proper tables are created.
 ***
 # **WHO**
- **Kyle - Implementation & Presentation ** 
+ **Kyle - Implementation & Presentation** 
   
   Front-end - **_10pts total_**
   
@@ -44,9 +44,9 @@ This will probably be the easiest part of the project to implement. Here's an ex
    * API request handlers - _5pts_
    * API callback handlers (make responses database friendly) - _5pts_
  
- **Spencer - Implementation & Presentation ** 
+ **Spencer - Implementation & Presentation** 
   
-  Backend - **_15pts Implementation & _**
+  Backend - **_15pts Implementation/ _**
   
    * Table design - _5pts_
    * Data normalization - _5pts_
