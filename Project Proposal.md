@@ -43,16 +43,16 @@ This will probably be the easiest part of the project to implement. Here's an ex
    * Documentation/Usage - _5pts_ 
    * API request handlers - _5pts_
    * API callback handlers (make responses database friendly) - _5pts_
- 
- **Spencer - Implementation & Presentation** 
+ ***
+ **Spencer - Implementation** 
   
-  Backend - **_15pts Implementation/ _**
+  Backend - **_15pts total_**
   
    * Table design - _5pts_
    * Data normalization - _5pts_
    * Proper foreign-key/primary key usage - _5pts_
   
-  Server - **_10pts Implementation & _**
+  Server - **_10pts total_**
   
    * Functionality - _5pts_
    * Correct handling of client http requests/responses - _5pts_
