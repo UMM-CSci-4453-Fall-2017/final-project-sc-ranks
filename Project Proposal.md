@@ -32,18 +32,19 @@ This will probably be the easiest part of the project to implement. Here's an ex
 # **WHO**
  **Kyle - Implementation & Presentation for:** 
   Front-end - **_10pts total_**
-  * Design/Style - _5pts_
-  * Functionality - _5pts_
+   * Design/Style - _5pts_
+   * Functionality - _5pts_
   Blizzard API - **_15pts total_**
-  * Documentation/Usage - _5pts_ 
-  * API request handlers - _5pts_
-  * API callback handlers (make responses database friendly) - _5pts_
+   * Documentation/Usage - _5pts_ 
+   * API request handlers - _5pts_
+   * API callback handlers (make responses database friendly) - _5pts_
+ 
  **Spencer - Implementation & Presentation for:** 
   Backend - **_15pts total_**
-  * Table design - _5pts_
-  * Data normalization - _5pts_
-  * Proper foreign-key/primary key usage - _5pts_
+   * Table design - _5pts_
+   * Data normalization - _5pts_
+   * Proper foreign-key/primary key usage - _5pts_
   Server - **_10pts total_**
-  * Functionality - _5pts_
-  * Correct handling of client http requests - _5pts_
+   * Functionality - _5pts_
+   * Correct handling of client http requests/responses - _5pts_
  
