@@ -31,7 +31,7 @@ This will probably be the easiest part of the project to implement. Here's an ex
  The current proposed structure is not normalized, and will need to be when proper tables are created.
 ***
 # **WHO**
- **Kyle - Implementation & Presentation** 
+ **Kyle - Implementation** 
   
   Front-end - **_10pts total_**
   
@@ -46,13 +46,12 @@ This will probably be the easiest part of the project to implement. Here's an ex
  ***
  **Spencer - Implementation** 
   
-  Backend - **_15pts total_**
+  Backend - **_10pts total_**
   
    * Table design - _5pts_
-   * Data normalization - _5pts_
-   * Proper foreign-key/primary key usage - _5pts_
+   * Proper structure - (normalization, foreign/primary keys, etc.) - _10pts_
   
-  Server - **_10pts total_**
+  Server - **_15pts total_**
   
    * Functionality - _5pts_
    * Correct handling of client http requests/responses - _5pts_
