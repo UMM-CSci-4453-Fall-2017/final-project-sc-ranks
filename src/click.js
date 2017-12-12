@@ -5,7 +5,7 @@ angular.module('ranks',[])
 
 function RanksCtrl($scope,RanksApi) {
 
-    $scope.apiKey="123456";
+    $scope.apiKey="u66e7we2se22mzqxsdezwn2vr3wm8x69";
     $scope.blizzardApi="https://us.api.battle.net/sc2/"
     $scope.ladderApi="ladder/:"
     $scope.profileApi="profile/:"
@@ -13,6 +13,7 @@ function RanksCtrl($scope,RanksApi) {
     $scope.playerRegions=[];
     $scope.playerNames=[];
     $scope.ladderIDs=[];
+    $scope.playerProfile=[];
 
 
 }
