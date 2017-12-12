@@ -1,21 +1,50 @@
 <!doctype html>
 <html>
-<head lang="en">
-    <meta charset="utf-8">
-    <title>SC Ranks</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
-    <script src="click.js"></script>
-</head>
-
-<body ng-app="ranks" style="background-color:#808080">
-
-<div class="container-fluid">
-
-
-</div>
-
-
-</body>
-
+   <head lang="en">
+      <meta charset="utf-8">
+      <title>SC Ranks</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+      <script src="click.js"></script>
+   </head>
+   <body ng-app="ranks">
+      <div class="container-fluid" ng-controller="ranksCtrl">
+         <h1>SC Ranks - Search for a profile or ladder in Starcraft 2.</h1>
+         <div id="searchButtons" class="col-sm-1">
+            <div ng-repeat="button in searchButtons">
+               <div style="position:absolute;left:{{button.left}}px;top:{{button.top}}px">
+                  <button id="{{button.buttonID}}" ng-click="buttonClick($event,'button.buttonID');">{{button.label}}</button>
+               </div>
+            </div>
+         </div>
+         <div ng-show="errorMessage != ''">
+            <div class="col-sm-12">
+               <h3 class="text-danger">{{errorMessage}}</h3>
+            </div>
+         </div>
+         <div class="col-sm-6">
+            <table class="table table-striped table-hover">
+               <thead>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="item in transactionItems" ng-click="deleteItem($event, 'item.item');">
+                     <td id="{{item.item}}">{{item.item}}</td>
+                     <td>{{item.quantity}}</td>
+                     <td>{{item.total}}</td>
+                  </tr>
+               </tbody>
+               <thread>
+                  <tr>
+                     <th></th>
+                     <th>Total: </th>
+                     <th>{{totalPrice}}</th>
+                  </tr>
+               </thread>
+            </table>
+         </div>
+      </div>
+   </body>
 </html>
