@@ -25,7 +25,6 @@ app.get("/searchButtons",function(req,res){
 
               }
     }})(res));
-
 });
 
 app.get("/getProfile",function(req,res){
@@ -34,16 +33,32 @@ app.get("/getProfile",function(req,res){
     var sql = 'CALL hamme503.getProfile(' + profID + ", " + profName + ")";
         connection.query(sql, (function(res){return function(err,rows,fields) {
             if (err){console.log("Error retrieving profile data: ");
-
                     console.log(err);
                     res.send(err);
                   } else {
                     res.send(rows);
                   }
-
     }})(res));
+});
 
-
+app.get("/insertProfile",function(req,res){
+  var profileData = req.param('profileData');
+  var sql_1 = 'INSERT INTO hamme503.profiles VALUES ('+profileData[0]+
+            ','+profileData[1]+','+profileData[2]+','+profileData[3]+');';
+  var sql_2 = 'INSERT INTO hamme503.profileData VALUES ('+profileData[0]+','+
+              profileData[4]+','+profileData[5]+','+profileData[6]+','+
+              profileData[7]+','+profileData[8]+','+profileData[9]+','+
+              profileData[10]+','+profileData[11]+','+profileData[12]+','+
+              profileData[13]+','+profileData[14]+')';
+  var sql = sql_1 + sql_2;
+  connection.query(sql,(function(res){return function(err,rows,fields) {
+      if(err){console.log("Error inserting profile data");
+              console.log(err);
+              res.send(err);
+            } else {
+              res.send(rows);
+            }
+  }})(res));
 });
 
 app.get("/getLadder",function(req,res){
@@ -51,25 +66,33 @@ app.get("/getLadder",function(req,res){
   var sql = 'call hamme503.getLadder(' + ladderID + ')';
     connection.query(sql, (function(res){return function(err,rows,fields) {
         if(err){console.log("Error retrieving ladder data: ");
-
                 console.log(err);
                 res.send(err);
               } else {
                 res.send(rows);
               }
-    }}) (res) );
-} );
+    }})(res));
+});
 
-app.get("/getGM",function(req,res) {
-  var sql = 'call hamme503.getLadder(263456)';
-  connection.query(sql, (function(res){return function(err,row,fields) {
-      if(err){console.log("Error retrieving ladder data: ");
-              console.log(err);
-              res.send(err);
-            } else {
-              res.send(rows);
-            }
-     }})(res));
- });
+app.get("/insertLadder",function(req,res){
+  var ladderData = req.param('ladderData');
+  var loopCounter = 0; // counter to know when we need to send back the http response
+  for (var i = 0; i < ladderData.length; i++) {
+    var sql = 'INSERT INTO hamme503.ladderData VALUES ('+ladderData[i][0]+','+ladderData[i][1]
+              +','+ladderData[i][2]+','+ladderData[i][3]+','+ladderData[i][4]+','+ladderData[i][5]+','
+              +ladderData[i][6]+')';
+      connection.query(sql, (function(res){return function(err,rows,fields) {
+          if(err){console.log("Error retrieving ladder data: ");
+                  console.log(err);
+                  res.send(err);
+                }
+          else if (loopCounter == ladderData.length - 1) {
+            res.send(rows);
+          } else {
+            loopCounter++;
+          }
+      }})(res));
+  }
+});
 
 app.listen(port);
